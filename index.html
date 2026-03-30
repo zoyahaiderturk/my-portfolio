@@ -1,164 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pixel Digital | Zoya Haider Turk</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    
+    <title>Saleha Haider | Portfolio</title>
     <style>
-        /* === COLOR SCHEME === */
-        :root {
-            --navy-blue: #0a192f;
-            --darker-navy: #020c1b;
-            --teal-cyan: #00d4ff;
-            --teal-glow: rgba(0, 212, 255, 0.4);
-            --light-grey: #ccd6f6;
-            --white: #ffffff;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
-        body { background-color: var(--navy-blue); color: var(--light-grey); overflow-x: hidden; }
-        a { text-decoration: none; transition: 0.3s; }
-
-        /* === NAVIGATION === */
-        nav {
-            display: flex; justify-content: space-between; align-items: center;
-            padding: 15px 8%; background: rgba(10, 25, 47, 0.95);
-            position: sticky; top: 0; z-index: 1000; border-bottom: 2px solid #1f293a;
-        }
-        .logo-container { display: flex; align-items: center; gap: 15px; }
-        .logo-pd {
-            font-size: 30px; font-weight: 800; color: var(--teal-cyan);
-            border: 3px solid var(--teal-cyan); padding: 2px 10px;
-            border-radius: 8px; box-shadow: 0 0 15px var(--teal-glow);
-        }
-        .website-name { font-size: 20px; font-weight: 700; color: var(--white); text-transform: uppercase; }
-        
-        .nav-links { list-style: none; display: flex; gap: 30px; }
-        .nav-links a { color: var(--light-grey); font-weight: 500; font-size: 14px; text-transform: uppercase; }
-        .nav-links a:hover { color: var(--teal-cyan); }
-
-        /* === HERO SECTION === */
-        .hero {
-            position: relative; min-height: 90vh; display: flex; align-items: center; padding: 0 10%;
-            background: url('https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=1965&q=80') center/cover;
-        }
-        .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to right, rgba(10, 25, 47, 0.95), rgba(10, 25, 47, 0.7)); }
-        .hero-content { position: relative; z-index: 2; max-width: 800px; }
-
-        .welcome-text { color: var(--teal-cyan); letter-spacing: 3px; font-weight: 600; display: block; margin-bottom: 10px; }
-        h1 { font-size: 3.5rem; font-weight: 800; color: var(--white); line-height: 1.1; margin-bottom: 10px; }
-        h2 { font-size: 2rem; font-weight: 700; color: var(--light-grey); margin-bottom: 20px; }
-        .tagline { border-left: 4px solid var(--teal-cyan); padding-left: 20px; color: var(--light-grey); margin-bottom: 30px; font-size: 1.1rem; }
-        
-        .btn { padding: 12px 35px; background: var(--teal-cyan); color: var(--darker-navy); font-weight: 700; border-radius: 4px; display: inline-block; margin-right: 15px; }
-        .btn:hover { box-shadow: 0 0 20px var(--teal-glow); background: var(--white); }
-
-        /* === PROJECTS SECTION (NEW ADDITION) === */
-        .section { padding: 80px 8%; }
-        .section-title { font-size: 2.5rem; color: var(--white); text-align: center; margin-bottom: 50px; }
-        .section-title span { color: var(--teal-cyan); border-bottom: 3px solid var(--teal-cyan); }
-
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .card {
-            background: #112240; padding: 30px; border-radius: 10px;
-            border: 1px solid #233554; transition: 0.3s;
-        }
-        .card:hover { transform: translateY(-10px); border-color: var(--teal-cyan); box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7); }
-        .icon { font-size: 40px; margin-bottom: 20px; display: block; }
-        .card h3 { color: var(--white); margin-bottom: 10px; font-size: 1.4rem; }
-        .card p { color: var(--light-grey); font-size: 0.9rem; line-height: 1.6; margin-bottom: 20px; }
-        .card-link { color: var(--teal-cyan); font-weight: bold; border-bottom: 1px solid transparent; }
-        .card-link:hover { border-bottom: 1px solid var(--teal-cyan); }
-
-        /* === CONTACT SECTION === */
-        .contact-container { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; text-align: center; }
-        .contact-box { background: #112240; padding: 30px; border-radius: 10px; width: 300px; border: 1px solid #233554; }
-        .contact-box:hover { border-color: var(--teal-cyan); }
-        
-        footer { text-align: center; padding: 20px; background: var(--darker-navy); color: #8892b0; margin-top: auto; border-top: 1px solid #1f293a; }
+        body { font-family: sans-serif; text-align: center; padding: 50px; background-color: #f4f4f4; }
+        .container { background: white; padding: 20px; border-radius: 10px; max-width: 800px; margin: auto; }
+        img { width: 100%; max-width: 300px; border-radius: 10px; margin: 10px; }
+        h1 { color: #333; }
     </style>
 </head>
 <body>
-
-    <nav>
-        <div class="logo-container">
-            <div class="logo-pd">PD</div>
-            <div class="website-name">Pixel Digital</div>
-        </div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <header id="home" class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <span class="welcome-text">WELCOME TO MY DIGITAL SPACE</span>
-            <h1>Zoya Haider Turk</h1>
-            <h2>at Pixel Digital</h2>
-            <div class="tagline">
-                <p style="color:var(--teal-cyan); font-weight:bold; font-size:1.5rem;">Empowering Your Digital Presence.</p>
-                <p>Building Reliable Digital Experiences with Neural Networks.</p>
-            </div>
-            <a href="#projects" class="btn">View My Projects</a>
-            <a href="#contact" class="btn" style="background:transparent; border:2px solid var(--teal-cyan); color:var(--teal-cyan);">Hire Me</a>
-        </div>
-    </header>
-
-    <section id="projects" class="section">
-        <h2 class="section-title">Featured <span>Projects</span></h2>
-        <div class="grid">
-            
-            <div class="card">
-                <span class="icon">🛡️</span>
-                <h3>Neural Grid Security</h3>
-                <p>Advanced AI security system protecting 3 zones: Climate, Intruder, and Fire safety.</p>
-                <a href="https://github.com/zoyahaiderturk/neural-grid-" target="_blank" class="card-link">View Repository &rarr;</a>
-            </div>
-
-            <div class="card">
-                <span class="icon">🎨</span>
-                <h3>Opsys Pro Branding</h3>
-                <p>Complete brand identity, Logo design, and Slogans created for Opsys Pro.</p>
-                <a href="https://github.com/zoyahaiderturk/opsys-pro" target="_blank" class="card-link">View Designs &rarr;</a>
-            </div>
-
-            <div class="card">
-                <span class="icon">🤖</span>
-                <h3>Water Reminder Bot</h3>
-                <p>A Python-based AI robot concept that reminds users to stay hydrated.</p>
-                <a href="https://github.com/zoyahaiderturk/water-bot" target="_blank" class="card-link">View Code &rarr;</a>
-            </div>
-
-        </div>
-    </section>
-
-    <section id="contact" class="section" style="background:var(--darker-navy);">
-        <h2 class="section-title">Contact <span>Info</span></h2>
-        <div class="contact-container">
-            <div class="contact-box">
-                <span style="font-size:30px;">📧</span>
-                <h3 style="color:white; margin:10px 0;">Email</h3>
-                <p style="color:#a0aab5; margin-bottom:15px;">zoyahaider973@gmail.com</p>
-                <a href="mailto:zoyahaider973@gmail.com" class="btn" style="padding:8px 20px; font-size:14px;">Send Email</a>
-            </div>
-            
-            <div class="contact-box">
-                <span style="font-size:30px;">📞</span>
-                <h3 style="color:white; margin:10px 0;">Phone</h3>
-                <p style="color:#a0aab5; margin-bottom:15px;">0316-5131310</p>
-                <a href="tel:+923165131310" class="btn" style="padding:8px 20px; font-size:14px;">Call Now</a>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 Pixel Digital | Designed by Zoya Haider Turk</p>
-    </footer>
-
+    <div class="container">
+        <h1>Saleha Haider</h1>
+        <p>Artificial Intelligence Student & Design Intern</p>
+        <hr>
+        <h2>My Work</h2>
+        <img src="project1.png" alt="Project 1">
+        <img src="project2.png" alt="Project 2">
+        <img src="project3.png" alt="Project 3">
+    </div>
 </body>
 </html>
