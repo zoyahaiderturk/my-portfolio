@@ -3,48 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saleha Haider Turk | Portfolio</title>
+    <title>Saleha Haider Turk | Creative Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        /* General Styling */
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; line-height: 1.6; color: #333; background: #fafafa; }
-        .container { width: 85%; margin: auto; overflow: hidden; padding: 20px; }
-        
-        /* Highlighting and Key Colors */
-        :root { --primary-color: #2c3e50; --accent-color: #3498db; --bg-light: #ecf0f1; }
+        :root { --dark: #1a1a2e; --blue: #0f3460; --accent: #e94560; --gold: #f1c40f; --white: #ffffff; --glass: rgba(255, 255, 255, 0.1); }
+        body { font-family: 'Poppins', sans-serif; margin: 0; background: #0f0c29; background: linear-gradient(to right, #24243e, #302b63, #0f0c29); color: white; scroll-behavior: smooth; }
+        .container { width: 90%; max-width: 1200px; margin: auto; padding: 20px; }
 
-        /* Hero Section (Introduction) */
-        header { background: var(--primary-color); color: #fff; padding: 100px 0; text-align: center; }
-        header h1 { margin: 0; font-size: 3.5rem; text-transform: uppercase; letter-spacing: 2px; }
-        header p { font-size: 1.4rem; opacity: 0.9; margin-top: 10px; }
-        header span { color: var(--accent-color); font-weight: bold; }
+        /* Header Section */
+        header { padding: 100px 0; text-align: center; background: rgba(0, 0, 0, 0.3); border-bottom: 1px solid var(--glass); }
+        header h1 { font-size: 3.8rem; margin: 0; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); text-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
+        header p { font-size: 1.3rem; opacity: 0.8; margin-top: 10px; font-weight: 300; }
 
-        /* --- ATTRACTIVE ABOUT ME SECTION --- */
-        .about { padding: 80px 0; background: #fff; text-align: center; position: relative; }
-        .about h2 { font-size: 2.5rem; color: var(--primary-color); margin-bottom: 20px; text-transform: uppercase; }
-        
-        /* Graphical Elements for About Me */
-        .about-graphics { display: flex; justify-content: center; gap: 50px; margin-bottom: 40px; color: var(--accent-color); font-size: 3rem; }
-        
-        /* Highlighted Text */
-        .about-text { font-size: 1.2rem; color: #555; max-width: 800px; margin: 0 auto; line-height: 1.8; }
-        .highlight { background-color: #f1c40f; color: #2c3e50; padding: 2px 8px; border-radius: 4px; font-weight: bold; }
-        .highlight-blue { color: var(--accent-color); font-weight: bold; }
+        /* Attractive About Section with Graphics */
+        .about { padding: 80px 0; background: var(--glass); backdrop-filter: blur(10px); border-radius: 30px; margin-top: -50px; border: 1px solid var(--glass); text-align: center; }
+        .about h2 { font-size: 2.5rem; margin-bottom: 20px; color: var(--gold); }
+        .about-text { max-width: 850px; margin: auto; font-size: 1.1rem; line-height: 1.8; color: #e0e0e0; }
+        .skills-grid { display: flex; justify-content: center; gap: 30px; margin-top: 40px; flex-wrap: wrap; }
+        .skill-item { background: var(--blue); padding: 15px 25px; border-radius: 15px; border: 1px solid var(--accent); transition: 0.3s; }
+        .skill-item i { font-size: 1.5rem; margin-bottom: 10px; display: block; color: var(--gold); }
+        .skill-item:hover { transform: scale(1.1); background: var(--accent); }
 
-        /* --- PORTFOLIO GALLERY SECTIONS --- */
-        .section-title { text-align: center; margin: 60px 0 30px; font-size: 2.2rem; color: var(--primary-color); text-transform: uppercase; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-bottom: 50px; }
+        /* Portfolio Grids */
+        .section-title { margin: 80px 0 40px; text-align: center; font-size: 2.5rem; color: var(--white); text-transform: uppercase; letter-spacing: 2px; border-bottom: 2px solid var(--accent); display: inline-block; width: 100%; padding-bottom: 10px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
         
-        /* Card Frame for each Work */
-        .card { background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); text-align: center; transition: transform 0.3s ease; border: 1px solid #eee; }
-        .card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.12); }
-        .card img { width: 100%; height: 230px; object-fit: cover; border-radius: 8px; margin-bottom: 15px; }
-        .card-info { font-weight: bold; font-size: 1.15rem; color: var(--primary-color); }
-        .card-desc { font-size: 0.95rem; color: #777; margin-top: 5px; }
-        
-        video { width: 100%; height: 230px; border-radius: 8px; margin-bottom: 15px; object-fit: cover; background: #000; }
+        /* Modern Frame/Card Design */
+        .card { background: var(--blue); border-radius: 20px; overflow: hidden; position: relative; border: 1px solid var(--glass); transition: 0.4s ease; }
+        .card:hover { transform: translateY(-15px); border-color: var(--gold); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+        .card img, .card video { width: 100%; height: 250px; object-fit: cover; border-bottom: 3px solid var(--accent); }
+        .card-body { padding: 20px; text-align: left; }
+        .card-title { font-weight: bold; font-size: 1.2rem; color: var(--gold); }
+        .card-desc { font-size: 0.9rem; color: #bdc3c7; margin-top: 5px; }
 
-        footer { text-align: center; padding: 25px; background: var(--primary-color); color: white; margin-top: 40px; font-size: 1.1rem; }
+        footer { text-align: center; padding: 50px 0; background: rgba(0,0,0,0.5); margin-top: 100px; border-top: 1px solid var(--glass); }
+        footer p { margin: 5px 0; opacity: 0.7; }
+        .highlight-text { color: var(--accent); font-weight: bold; }
     </style>
 </head>
 <body>
@@ -52,75 +46,61 @@
     <header>
         <div class="container">
             <h1>Saleha Haider Turk</h1>
-            <p>Creative Studio Specialist & <span class="highlight-blue">AI Development Student</span></p>
+            <p>Graphic Designer | AI Development Student | Creative Specialist</p>
         </div>
     </header>
 
-    <section class="about">
-        <div class="container">
-            <h2>About Me</h2>
-            
-            <div class="about-graphics">
-                <div class="icon-box"><i class="fas fa-palette"></i><p style="font-size:1rem;color:#555;">Creative</p></div>
-                <div class="icon-box"><i class="fas fa-code"></i><p style="font-size:1rem;color:#555;">Development</p></div>
-                <div class="icon-box"><i class="fas fa-graduation-cap"></i><p style="font-size:1rem;color:#555;">Education</p></div>
-            </div>
-
-            <div class="about-text">
-                <p>Hello! I am Saleha Haider Turk, a passionate and dedicated <span class="highlight">BS Artificial Intelligence</span> student at the <span class="highlight-blue">University of Haripur</span>, based in the beautiful city of Haripur.</p>
-                <p>My work sits at the intersection of imagination and technology. I enjoy crafting impactful visual solutions in my Creative Studio and building intelligent, functional digital products through Development.</p>
-            </div>
-        </div>
-    </section>
-
     <div class="container">
-        <div class="section-title">Design Showcase</div>
+        <section class="about">
+            <h2><i class="fas fa-user-circle"></i> Professional Profile</h2>
+            <div class="about-text">
+                <p>I am an <span class="highlight-text">Artificial Intelligence</span> student at the <span class="highlight-text">University of Haripur</span>. 
+                I specialize in digital storytelling, branding, and development. Based in Haripur, my goal is to create 
+                innovative visual identities that help brands stand out in the digital world.</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-item"><i class="fas fa-palette"></i>UI/UX Design</div>
+                <div class="skill-item"><i class="fas fa-video"></i>Motion Graphics</div>
+                <div class="skill-item"><i class="fas fa-brain"></i>AI Solutions</div>
+                <div class="skill-item"><i class="fas fa-code"></i>Development</div>
+            </div>
+        </section>
+
+        <div class="section-title">Festive & Special Design</div>
         <div class="grid">
-            <div class="card">
-                <img src="PORCHE.png" alt="Porsche Ad Design">
-                <div class="card-info">Porsche Ad Design</div>
-                <p class="card-desc">Luxury automotive advertising poster.</p>
-            </div>
-            <div class="card">
-                <img src="REFRESH.png" alt="Refreshing Drink Mockup">
-                <div class="card-info">Refreshing Drink Mockup</div>
-                <p class="card-desc">Mockup design for a vibrant beverage brand.</p>
-            </div>
-            <div class="card">
-                <img src="blend.png" alt="Creative Blend Poster">
-                <div class="card-info">Creative Blend Poster</div>
-                <p class="card-desc">Artistic composite design project.</p>
-            </div>
-            <div class="card">
-                <img src="hairoil.png" alt="Product Branding">
-                <div class="card-info">Hair Oil Product Branding</div>
-                <p class="card-desc">Full brand identity for a beauty product.</p>
-            </div>
+            <div class="card"><img src="EID MUBRIK.png"><div class="card-body"><div class="card-title">Eid-ul-Fitr Greeting</div><div class="card-desc">Floral Islamic branding.</div></div></div>
+            <div class="card"><img src="eid 5.png"><div class="card-body"><div class="card-title">Eid Celebration Post</div><div class="card-desc">Modern eid aesthetics.</div></div></div>
+            <div class="card"><img src="HAPPY RAMADAN OP.png"><div class="card-body"><div class="card-title">Ramadan Kareem</div><div class="card-desc">Spiritual digital art.</div></div></div>
+            <div class="card"><img src="BUN.png"><div class="card-body"><div class="card-title">BUN Concept</div><div class="card-desc">Unique typography design.</div></div></div>
         </div>
 
-        <div class="section-title">Video & Motion Work</div>
+        <div class="section-title">Branding & Corporate Work</div>
         <div class="grid">
-            <div class="card">
-                <video controls>
-                    <source src="SWEET.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <div class="card-info">SWEET Motion Graphics</div>
-                <p class="card-desc">Dynamic video intro for a sweet brand.</p>
-            </div>
-            <div class="card">
-                <video controls>
-                    <source src="SMOKE.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <div class="card-info">SMOKE Visual Effects</div>
-                <p class="card-desc">Smoke simulation and integration project.</p>
-            </div>
+            <div class="card"><img src="PORCHE.png"><div class="card-body"><div class="card-title">Porsche Ad</div><div class="card-desc">Luxury car advertising.</div></div></div>
+            <div class="card"><img src="hairoil.png"><div class="card-body"><div class="card-title">Natural Hair Oil</div><div class="card-desc">Branding for organic products.</div></div></div>
+            <div class="card"><img src="MONSTER.png"><div class="card-body"><div class="card-title">Monster Energy</div><div class="card-desc">Dynamic brand layout.</div></div></div>
+            <div class="card"><img src="REFRESH.png"><div class="card-body"><div class="card-title">Drink Mockup</div><div class="card-desc">Product visualization.</div></div></div>
+            <div class="card"><img src="op 2k6.png"><div class="card-body"><div class="card-title">OP 2K6 Identity</div><div class="card-desc">Corporate event branding.</div></div></div>
+            <div class="card"><img src="project8 OP.png"><div class="card-body"><div class="card-title">Case Study 08</div><div class="card-desc">University project analysis.</div></div></div>
+            <div class="card"><img src="post22.png"><div class="card-body"><div class="card-title">Social Media V2</div><div class="card-desc">Marketing assets.</div></div></div>
+            <div class="card"><img src="reflection.png"><div class="card-body"><div class="card-title">Visual Reflection</div><div class="card-desc">Artistic photo editing.</div></div></div>
+        </div>
+
+        <div class="section-title">Motion Graphics & Videos</div>
+        <div class="grid">
+            <div class="card"><video controls muted><source src="eid mubrik post.mp4"></video><div class="card-body"><div class="card-title">Eid Motion Poster</div><div class="card-desc">Animated festive greetings.</div></div></div>
+            <div class="card"><video controls muted><source src="opsys pro post 1.mp4"></video><div class="card-body"><div class="card-title">Opsys Pro Promo</div><div class="card-desc">Corporate motion graphics.</div></div></div>
+            <div class="card"><video controls muted><source src="SWEET.mp4"></video><div class="card-body"><div class="card-title">Sweet Visuals</div><div class="card-desc">Colorful motion intro.</div></div></div>
+            <div class="card"><video controls muted><source src="SMOKE.mp4"></video><div class="card-body"><div class="card-title">Smoke Simulation</div><div class="card-desc">VFX project.</div></div></div>
+            <div class="card"><video controls muted><source src="minion.mp4"></video><div class="card-body"><div class="card-title">Character Animation</div><div class="card-desc">Minion 3D render.</div></div></div>
+            <div class="card"><video controls muted><source src="turkey.mp4"></video><div class="card-body"><div class="card-title">Travel Montage</div><div class="card-desc">Cinematic video edit.</div></div></div>
         </div>
     </div>
 
     <footer>
-        <p>&copy; 2026 Saleha Haider Turk | Crafted with Passion from Haripur</p>
+        <p><strong>Saleha Haider Turk</strong> | University of Haripur</p>
+        <p>Located in Haripur, Pakistan</p>
+        <p>&copy; 2026 | Built with creativity and code.</p>
     </footer>
 
 </body>
